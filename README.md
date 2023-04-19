@@ -20,7 +20,9 @@ nvidia-smi
 #pay attention to cuda toolkitversion
 
 conda create --name stablelm
+
 conda activate stablelm
+
 
 
 
