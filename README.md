@@ -20,7 +20,7 @@ StableLM is a chatbot framework that allows you to build natural language interf
 * It has a large and active community
 
 
-![Working](https://github.com/astrobleem/Simple-StableLM-Chat/blob/a9dd3d307d6dad140d7775f9badf635ba2861f12/working.bmp)
+![Working](https://github.com/astrobleem/Simple-StableLM-Chat/blob/c48523ebf1e942e33cce2ca434c368a57a8f798f/stablepoem.png)
 
 You'll need a working cuda torch environment.
 
