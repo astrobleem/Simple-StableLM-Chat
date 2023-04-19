@@ -4,7 +4,7 @@
 #https://github.com/Stability-AI/StableLM/blob/main/README.md
 
 
-This is a very simple python app that you can use to get up and talking with Stable Diffusions Stable LM models locally.
+This is a very simple python app that you can use to get up and talking with Stability AI's recently released Stable LM models locally.
 
 
 
