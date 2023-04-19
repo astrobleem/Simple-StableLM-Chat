@@ -37,10 +37,8 @@ conda create --name stablelm
 conda activate stablelm
 
 
-
-
-
 conda config --add channels pytorch
+
 conda config --add channels conda-forge
 
 
