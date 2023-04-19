@@ -5,7 +5,7 @@
 
 
 This is a very simple python app that you can use to get up and talking with Stable Diffusions Stable LM models locally.
-StableLM is a chatbot framework that allows you to build natural language interfaces. 
+
 
 
 Chatbot Chatbot Documentation
