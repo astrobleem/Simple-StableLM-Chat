@@ -45,9 +45,11 @@ conda config --add channels conda-forge
 
 
 #change cudatoolkit to match your installed version
+
 conda install pytorch torchvision torchaudio cudatoolkit=11.4 -c pytorch -c nvidia
 
 #huggingface download of model wouldnt work until i did this
+
 pip install --upgrade urllib3
 
 #checks to see if torch works with cuda
