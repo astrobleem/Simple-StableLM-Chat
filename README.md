@@ -1,10 +1,23 @@
 # Simple-StableLM-Chat
-created from
+
 
 #https://github.com/Stability-AI/StableLM/blob/main/README.md
 
 
 This is a very simple python app that you can use to get up and talking with Stable Diffusions Stable LM models locally.
+StableLM is a chatbot framework that allows you to build natural language interfaces. 
+
+
+Chatbot Chatbot Documentation
+---------------
+
+StableLM is a chatbot framework that allows you to build natural language interfaces. Here's some information about StableLM:
+
+* The StableLM API is built on top of the popular Natural Language Toolkit (NLTK) library.
+* StableLM supports various NLP tasks, such as tokenization, part-of-speech
+* It is an open-source project, with a Python version included.
+* It is written by a team of volunteers, who are always available to support its development.
+* It has a large and active community
 
 
 ![Working](https://github.com/astrobleem/Simple-StableLM-Chat/blob/a9dd3d307d6dad140d7775f9badf635ba2861f12/working.bmp)
