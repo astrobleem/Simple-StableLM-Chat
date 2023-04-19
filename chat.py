@@ -61,7 +61,7 @@ while True:
     print("Oracle: " + response)
     
     # add the oracle's response to the session
-    session += "Oracle: " + response + "\n"
+    session = "Oracle: " + response + "\n"
     
 # print the entire session
 print("Conversation history:\n" + session)
