@@ -29,31 +29,6 @@ You'll need a working cuda torch environment.
 Here are some notes from the setup.
 
 
-Open PowerShell
-PS D:\downloads> nvidia-smi
-Wed Apr 19 20:12:01 2023
-+-----------------------------------------------------------------------------+
-| NVIDIA-SMI 473.81       Driver Version: 473.81       CUDA Version: 11.4     |
-|-------------------------------+----------------------+----------------------+
-| GPU  Name            TCC/WDDM | Bus-Id        Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
-|                               |                      |               MIG M. |
-|===============================+======================+======================|
-|   0  Tesla M40 24GB     WDDM  | 00000000:01:00.0 Off |                    0 |
-| N/A   27C    P8    17W / 250W |     46MiB / 23040MiB |      0%      Default |
-|                               |                      |                  N/A |
-+-------------------------------+----------------------+----------------------+
-
-+-----------------------------------------------------------------------------+
-| Processes:                                                                  |
-|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
-|        ID   ID                                                   Usage      |
-|=============================================================================|
-|  No running processes found                                                 |
-+-----------------------------------------------------------------------------+
-
-take note CUDA Version: 11.4 
-
 
 Invoke-WebRequest -Uri https://repo.anaconda.com/archive/Anaconda3-2021.05-Windows-x86_64.exe -OutFile Anaconda3-2021.05-Windows-x86_64.exe
 
