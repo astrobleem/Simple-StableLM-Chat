@@ -1,7 +1,6 @@
 # Simple-StableLM-Chat
 
-
-#https://github.com/Stability-AI/StableLM/blob/main/README.md
+![Built to use Stability AI's Stable LM](https://github.com/Stability-AI/StableLM/blob/main/README.md)
 
 
 This is a very simple python app that you can use to get up and talking with Stability AI's recently released Stable LM models locally.
@@ -25,19 +24,19 @@ You'll need a working cuda torch environment.
 
 
 
-Here are some notes from the setup.
+Here are some notes on how to get this setup:
 
-
+#Open PowerShell
 
 Invoke-WebRequest -Uri https://repo.anaconda.com/archive/Anaconda3-2021.05-Windows-x86_64.exe -OutFile Anaconda3-2021.05-Windows-x86_64.exe
 
 .\Anaconda3-2021.05-Windows-x86_64.exe /S
 
-wait a long time... this launches silent install of anaconda
+#wait a long time... this launches silent install of anaconda
 
-close PowerShell
+#close PowerShell
 
-launch Anaconda Prompt powershell 
+#launch Anaconda Prompt powershell 
 
 git clone https://github.com/astrobleem/Simple-StableLM-Chat.git
 
