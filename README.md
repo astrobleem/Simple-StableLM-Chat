@@ -17,10 +17,21 @@ StableLM is a chatbot framework that allows you to build natural language interf
 * It is an open-source project, with a Python version included.
 
 
-
+Example Output
+---------------
 ![Working](https://github.com/astrobleem/Simple-StableLM-Chat/blob/c48523ebf1e942e33cce2ca434c368a57a8f798f/stablepoem.png)
 
+
+
+
+Setting Up
+---------------
+
 You'll need a working cuda torch environment.
+To load the 7B parameter models, you'll need at least 16GB of RAM, and a GPU with minimum 16GB of VRAM.
+
+This works on my Nvida Tesla M40 with 24GB ram.
+
 
 
 
