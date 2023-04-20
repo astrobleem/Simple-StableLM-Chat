@@ -5,6 +5,13 @@
 
 This is a very simple python app that you can use to get up and talking with Stability AI's recently released Stable LM models locally.
 
+Requirements
+---------------
+This works on my computer to load the 7B parameter models.
+
+Windows 10 
+16GB System RAM
+Nvida Tesla M40 with 24GB VRAM
 
 
 Chatbot Documentation
@@ -27,10 +34,11 @@ Example Output
 Setting Up
 ---------------
 
-You'll need a working cuda torch environment.
-To load the 7B parameter models, you'll need at least 16GB of RAM, and a GPU with minimum 16GB of VRAM.
+You'll need a working conda and cuda torch environment.
 
-This works on my Nvida Tesla M40 with 24GB ram.
+
+
+
 
 
 
@@ -75,6 +83,9 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 python -c "import torch; print(torch.__version__)"
 
+
+Execute the Program
+---------------------
 
 python .\chat.py
 
