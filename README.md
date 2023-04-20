@@ -34,13 +34,16 @@ Invoke-WebRequest -Uri https://repo.anaconda.com/archive/Anaconda3-2021.05-Windo
 
 .\Anaconda3-2021.05-Windows-x86_64.exe /S
 
-wait a long time... anaconda is stupid to install
+wait a long time... this launches silent install of anaconda
+
 close PowerShell
 
 launch Anaconda Prompt powershell 
 
 git clone https://github.com/astrobleem/Simple-StableLM-Chat.git
+
 cd Simple-StableLM-Chat
+
 conda create --name stablelm
 
 conda activate stablelm
@@ -52,12 +55,17 @@ conda config --add channels conda-forge
 #change cudatoolkit to match your installed version
 
 conda install pytorch torchvision torchaudio cudatoolkit=11.4 -c pytorch -c nvidia
+
 conda install transformers
 
 pip install --upgrade urllib3
+
 conda install --file requirements.txt
+
 python -c "import torch; print(torch.cuda.is_available())"
+
 python -c "import torch; print(torch.__version__)"
+
 
 python .\chat.py
 
