@@ -9,9 +9,9 @@ Requirements
 ---------------
 This works on my computer to load the 7B parameter models.
 
-Windows 10 
-16GB System RAM
-Nvida Tesla M40 with 24GB VRAM
+-Windows 10 
+-16GB System RAM
+-Nvida Tesla M40 with 24GB VRAM
 
 
 Chatbot Documentation
