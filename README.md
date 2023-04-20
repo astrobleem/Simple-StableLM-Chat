@@ -19,11 +19,6 @@ This works on my computer to load the 7B parameter models.
 Chatbot Documentation
 ---------------
 
-StableLM is a chatbot framework that allows you to build natural language interfaces. Here's some information about StableLM:
-
-* The StableLM API is built on top of the popular Natural Language Toolkit (NLTK) library.
-* StableLM supports various NLP tasks, such as tokenization, part-of-speech
-* It is an open-source project, with a Python version included.
 
 
 Example Output
