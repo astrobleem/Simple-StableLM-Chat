@@ -19,6 +19,8 @@ This works on my computer to load the 7B parameter models.
 
 -Nvida Tesla M40 with 24GB VRAM
 
+-40 GB FREE DISK SPACE
+
 If you only have 16GB of RAM, and No GPU, this is going to be really bad. 
 It will attempt to load the 3B parameter model, which does fit, but there
 is no room left over for anything else so it starts swapping to disk. 
@@ -40,54 +42,9 @@ Setting Up
 ---------------
 
 I added a runme.bat file that should download and install miniconda and then then requirements, and then launch the app. 
+After cloning the repository, 
+Double click the runme.bat
+This will take a long time. It's going to download a lot of stuff.
 
-
-
-You'll need a working conda and cuda torch environment.
-Here are some notes on how to get this setup:
-
-#Open PowerShell
-
-Invoke-WebRequest -Uri https://repo.anaconda.com/archive/Anaconda3-2021.05-Windows-x86_64.exe -OutFile Anaconda3-2021.05-Windows-x86_64.exe
-
-.\Anaconda3-2021.05-Windows-x86_64.exe /S
-
-#wait a long time... this launches silent install of anaconda
-
-#close PowerShell
-
-#launch Anaconda Prompt powershell 
-
-git clone https://github.com/astrobleem/Simple-StableLM-Chat.git
-
-cd Simple-StableLM-Chat
-
-conda create --name stablelm
-
-conda activate stablelm
-
-conda config --add channels pytorch
-
-conda config --add channels conda-forge
-
-#change cudatoolkit to match your installed version
-
-conda install pytorch torchvision torchaudio cudatoolkit=11.4 -c pytorch -c nvidia
-
-conda install transformers
-
-pip install --upgrade urllib3
-
-conda install --file requirements.txt
-
-python -c "import torch; print(torch.cuda.is_available())"
-
-python -c "import torch; print(torch.__version__)"
-
-
-Execute the Program
----------------------
-
-python .\chat.py
 
 
