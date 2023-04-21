@@ -37,8 +37,8 @@ call "%CONDA_BAT%" config --add channels conda-forge
 
 
 echo Installing dependencies..
-call "%CONDA_BAT%" install --yes pytorch transformers torchvision torchaudio cudatoolkit=11.4 -c pytorch -c nvidia 
-
+call "%CONDA_BAT%" install --yes pytorch torchvision torchaudio cudatoolkit=11.4 -c pytorch -c nvidia 
+call "%CONDA_BAT%" install --yes transformers
 
 
 rem Cleanup
