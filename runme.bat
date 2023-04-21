@@ -1,38 +1,60 @@
 @echo off
 
-set CONDA_EXE=%UserProfile%\Miniconda3\Scripts\conda.exe
-set CONDA_ENV_NAME=stablelm
-set CONDA_CHANNELS=pytorch conda-forge
+rem Set the version of Miniconda to download
+set VERSION=latest
 
-echo Checking for Miniconda installation...
+rem Set the URL to download the latest Miniconda installer
+set URL=https://repo.anaconda.com/miniconda/Miniconda3-%VERSION%-Windows-x86_64.exe
+
+rem Set the name of the installer file
+set FILENAME=Miniconda3-%VERSION%-Windows-x86_64.exe
+
+rem Set the installation path
+set INSTALL_PATH=%USERPROFILE%\Miniconda3
+set CONDA_EXE=%INSTALL_PATH%\Scripts\conda.exe
+set CONDA_BAT=%INSTALL_PATH%\condabin\conda.bat
+set CONDA_ACT=%INSTALL_PATH%\Scripts\activate.bat
+set CONDA_ENV_NAME=stablelm
+
+
+
 if exist "%UserProfile%\Miniconda3" (
     echo Miniconda is already installed.
 ) else (
-    set DOWNLOAD_URL=https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
+rem Download the latest Miniconda installer using curl
+echo Downloading Miniconda installer...
+curl -o %FILENAME% %URL%
 
-    echo Downloading Miniconda installer...
-    curl -o miniconda.exe %DOWNLOAD_URL%
-
-    echo Installing Miniconda...
-    start /wait "" miniconda.exe /S /D="%UserProfile%\Miniconda3"
-
-    echo Cleaning up...
-    del /f miniconda.exe
-)
-
-echo Activating Conda environment...
-call "%CONDA_EXE%" activate %CONDA_ENV_NAME%
+rem Install Miniconda silently
+echo Installing Miniconda...
+start /wait "" "%FILENAME%" /S /D="%INSTALL_PATH%"
+echo Init Conda shell...
+call "%CONDA_EXE%" init cmd.exe
 
 echo Adding Conda channels...
-call "%CONDA_EXE%" config --env --add channels %CONDA_CHANNELS%
+call "%CONDA_BAT%" config --add channels pytorch
+call "%CONDA_BAT%" config --add channels conda-forge
 
-echo Installing packages with Conda...
-call "%CONDA_EXE%" install -y cpuid transformers pytorch torchvision torchaudio cudatoolkit=11.4 -c pytorch -c nvidia
 
-echo Upgrading urllib3 with Pip...
-pip install --upgrade urllib3
+echo Installing dependencies..
+call "%CONDA_BAT%" install --yes pytorch transformers torchvision torchaudio cudatoolkit=11.4 -c pytorch -c nvidia 
 
-echo Running chat.py...
-python .\chat.py
 
-echo Done.
+
+rem Cleanup
+echo Cleaning up...
+del "%FILENAME%"
+
+rem Print message when installation is complete
+echo Miniconda is now installed at %INSTALL_PATH%.
+)
+
+
+
+rem call "%CONDA_EXE%" python ./chat.py
+
+
+rem %windir%\System32\cmd.exe "/K" C:\Users\chad\miniconda3\Scripts\activate.bat C:\Users\chad\miniconda3
+
+
+cmd "/k activate base && python chat.py"
