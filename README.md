@@ -19,6 +19,10 @@ This works on my computer to load the 7B parameter models.
 
 -Nvida Tesla M40 with 24GB VRAM
 
+If you only have 16GB of RAM, and No GPU, this is going to be really bad. 
+It will attempt to load the 3B parameter model, which does fit, but there
+is no room left over for anything else so it starts swapping to disk. 
+
 
 Chatbot Documentation
 ---------------
@@ -35,15 +39,11 @@ Example Output
 Setting Up
 ---------------
 
+I added a runme.bat file that should download and install miniconda and then then requirements, and then launch the app. 
+
+
+
 You'll need a working conda and cuda torch environment.
-
-
-
-
-
-
-
-
 Here are some notes on how to get this setup:
 
 #Open PowerShell
