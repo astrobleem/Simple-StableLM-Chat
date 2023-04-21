@@ -32,13 +32,19 @@ echo Init Conda shell...
 call "%CONDA_EXE%" init cmd.exe
 
 echo Adding Conda channels...
-call "%CONDA_BAT%" config --add channels pytorch
 call "%CONDA_BAT%" config --add channels conda-forge
-
+call "%CONDA_BAT%" config --add channels pytorch
 
 echo Installing dependencies..
-call "%CONDA_BAT%" install --yes pytorch torchvision torchaudio cudatoolkit=11.4 -c pytorch -c nvidia 
-call "%CONDA_BAT%" install --yes transformers
+call "%CONDA_BAT%" env create --file environment.yml
+
+
+rem call "%CONDA_BAT%" install --yes pytorch
+rem call "%CONDA_BAT%" install --yes torchvision
+rem call "%CONDA_BAT%" install --yes torchaudio
+rem call "%CONDA_BAT%" install --yes torchaudio
+rem call "%CONDA_BAT%" install --yes cudatoolkit=11.4 
+rem call "%CONDA_BAT%" install --yes transformers
 
 
 rem Cleanup
@@ -51,8 +57,8 @@ echo Miniconda is now installed at %INSTALL_PATH%.
 
 
 echo Installing dependencies..
-call "%CONDA_BAT%" install --yes pytorch transformers torchvision torchaudio cudatoolkit=11.4 -c pytorch -c nvidia 
+call "%CONDA_BAT%" install --yes pytorch transformers torchvision torchaudio cudatoolkit=11.4
 
 
 
-cmd "/k activate base && python chat.py"
+cmd "/k activate stablelm && python chat.py"
