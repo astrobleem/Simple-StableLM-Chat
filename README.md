@@ -45,6 +45,11 @@ I added a runme.bat file that should download and install miniconda and then the
 After cloning the repository, 
 Double click the runme.bat
 This will take a long time. It's going to download a lot of stuff.
+I have included an environment.yaml file you can add this into your conda environnent with this command
+conda env create --file environment.yml
+
+Alternatively, check the wiki for manually setting up the environment.
+
 
 
 
