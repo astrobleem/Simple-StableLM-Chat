@@ -50,11 +50,9 @@ echo Miniconda is now installed at %INSTALL_PATH%.
 )
 
 
+echo Installing dependencies..
+call "%CONDA_BAT%" install --yes pytorch transformers torchvision torchaudio cudatoolkit=11.4 -c pytorch -c nvidia 
 
-rem call "%CONDA_EXE%" python ./chat.py
-
-
-rem %windir%\System32\cmd.exe "/K" C:\Users\chad\miniconda3\Scripts\activate.bat C:\Users\chad\miniconda3
 
 
 cmd "/k activate base && python chat.py"
