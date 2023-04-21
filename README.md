@@ -48,3 +48,14 @@ This will take a long time. It's going to download a lot of stuff.
 
 
 
+Contributing
+-------------
+
+Contributions to Simple-StableLM are welcome. If you find a bug or have a suggestion for a new feature, please open an issue on the GitHub repository. If you would like to contribute code, please fork the repository and create a pull request.
+
+License
+------------
+Simple-StableLM is released under the Apache 2.0 License. See LICENSE for details.
+
+
+
