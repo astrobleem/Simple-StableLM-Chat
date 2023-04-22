@@ -25,8 +25,22 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, StoppingCriteria, 
 
 
 # Check for CUDA availability
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"The device type is {device.type}")
+# device = torch.device("cuda" if not(torch.cuda.is_available()) else "cpu")
+# print(f"The device type is {device.type}")
+
+def get_device():
+    if torch.cuda.is_available():
+        # Get current GPU's VRAM (in bytes)
+        vram_bytes = torch.cuda.get_device_properties(0).total_memory
+
+        # Convert 24 GB to bytes
+        min_vram_required_bytes = 24 * (1024 ** 3)
+
+        if vram_bytes >= min_vram_required_bytes:
+            return torch.device("cuda")
+    return torch.device("cpu")
+
+device = get_device()
 
 
 # If using CPU support and use appropriate data type
