@@ -11,15 +11,22 @@ This is a very simple python app that you can use to get up and talking with Sta
 
 Requirements
 ---------------
-This works on my computer to load the 7B parameter models.
 
 -Windows 10 
 
 -16GB System RAM
 
+-40 GB FREE DISK SPACE
+
+Must have greater than 16GB of VRAM to load to the GPU 7B parameter models.
+
+Otherwise the 3B parameter model will be loaded to your CPU
+
+
+Confirmed to work with
 -Nvida Tesla M40 with 24GB VRAM
 
--40 GB FREE DISK SPACE
+
 
 If you only have 16GB of RAM, and No GPU, this is going to be really bad. 
 It will attempt to load the 3B parameter model, which does fit, but there
@@ -42,9 +49,17 @@ Setting Up
 ---------------
 
 I added a runme.bat file that should download and install miniconda and then then requirements, and then launch the app. 
+
+
 After cloning the repository, 
+
+
 Double click the runme.bat
+
+
 This will take a long time. It's going to download a lot of stuff.
+
+
 I have included an environment.yaml file you can add this into your conda environnent with this command
 conda env create --file environment.yml
 
