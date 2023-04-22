@@ -17,10 +17,11 @@ Author:
     Chad Doebelin
 """
 MODEL_NAME = "stabilityai/stablelm-tuned-alpha-7b"
-MAX_LENGTH = 128
-TEMPERATURE = 0.7
+MAX_LENGTH = 256
+TEMPERATURE = 0.65
 
 import torch
+import time
 from transformers import AutoModelForCausalLM, AutoTokenizer, StoppingCriteria, StoppingCriteriaList, pipeline
 
 
@@ -104,14 +105,17 @@ def oracle_response(question):
     # add your logic here to generate a response based on the user's question
     prompt = f"{session}\n<|USER|>{question}\n<|ASSISTANT|>\n"
     
-    if device.type == "cpu":
-        inputs = tokenizer(prompt, return_tensors="pt").to(device)
-        print("tokenized")
-    if device.type == "cuda":
-        inputs = tokenizer(prompt, return_tensors="pt").to(device)
+    inputs = tokenizer(prompt, return_tensors="pt").to(device)
+    print("Generating response...")
+     # Record the start time
+    start_time = time.time()
     
     tokens = model.generate(**inputs, max_new_tokens=MAX_LENGTH,temperature=TEMPERATURE,do_sample=True, stopping_criteria=StoppingCriteriaList([StopOnTokens()]))
     response = (tokenizer.decode(tokens[0], skip_special_tokens=True))
+    # Record the end time and calculate the elapsed time
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"Response generated! Time elapsed: {elapsed_time:.2f} seconds")  # Print the elapsed time
     return response
 
 # initialize an empty session
