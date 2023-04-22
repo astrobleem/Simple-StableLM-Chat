@@ -56,8 +56,8 @@ echo Miniconda is now installed at %INSTALL_PATH%.
 )
 
 
-echo Installing dependencies..
-call "%CONDA_BAT%" install --yes pytorch transformers torchvision torchaudio cudatoolkit=11.4
+rem echo Installing dependencies..
+rem call "%CONDA_BAT%" install --yes pytorch transformers torchvision torchaudio cudatoolkit
 
 
 
