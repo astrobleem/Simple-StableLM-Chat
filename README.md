@@ -13,9 +13,13 @@ Requirements
 ---------------
 
 -Windows 10 
+
 -16GB System RAM
+
 -40 GB FREE DISK SPACE
+
 Must have greater than 16GB of VRAM to load to the GPU 7B parameter models.
+
 Otherwise the 3B parameter model will be loaded to your CPU
 
 
