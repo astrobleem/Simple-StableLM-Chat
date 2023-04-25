@@ -123,6 +123,8 @@ def oracle_response(question):
     end_time = time.time()
     elapsed_time = end_time - start_time
     print(f"Response generated! Time elapsed: {elapsed_time:.2f} seconds")  # Print the elapsed time
+    print(f"Response generated! Time elapsed: {elapsed_time/60:.2f} minutes")
+
     return response
 
 # initialize an empty session
