@@ -43,6 +43,8 @@ def get_device():
 
         if vram_bytes >= min_vram_required_bytes:
             return torch.device("cuda")
+        if ((round(bytes_to_gb(vram_bytes))) >= 16):
+            return torch.device("cuda")
     print("You didn't have at least 16GB of VRAM. Switching to CPU.")
     return torch.device("cpu")
 
