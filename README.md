@@ -1,6 +1,7 @@
 # Simple-StableLM-Chat
 
 [Built to use Stability AI's Stable LM](https://github.com/Stability-AI/StableLM/)
+![image](https://user-images.githubusercontent.com/7433842/234352471-1e5e2eee-75de-4b03-8717-30e046708d37.png)
 
 StableLM is an open source language model developed by Stability AI that has been trained on an incredibly vast dataset called Pile, which contains 1.5 trillion tokens. This makes StableLM one of the most advanced language models available, capable of generating highly nuanced and accurate responses to a wide variety of inputs.
 
