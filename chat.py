@@ -179,7 +179,7 @@ while True:
         question = input("Ask the oracle a question: ")
     # get the oracle's response from the function
     response = oracle_response(question)
-    
+    response = response.replace(question,"")
     # respond with the oracle's response
     print("Oracle: " + response)
     
