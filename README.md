@@ -2,9 +2,15 @@
 
 [Built to use Stability AI's Stable LM](https://github.com/Stability-AI/StableLM/)
 
-StableLM is an language model developed by Stability AI that has been trained on an incredibly vast dataset called Pile, which contains 1.5 trillion tokens. This makes StableLM one of the most advanced language models available, capable of generating highly nuanced and accurate responses to a wide variety of inputs.
+StableLM is an open source language model developed by Stability AI that has been trained on an incredibly vast dataset called Pile, which contains 1.5 trillion tokens. This makes StableLM one of the most advanced language models available, capable of generating highly nuanced and accurate responses to a wide variety of inputs.
 
-The purpose of this simple python project is to showcase the capabilities of StableLM by building a simple chatbot that can engage in conversations with users. 
+Simple-StableLM-Chat is a python applciation that interfaces with the model, and generates text, based on the user's input.
+
+Purpose
+-----------
+1. Showcase the capabilities of StableLM by building a simple chatbot that can engage in conversations with users. 
+2. Provide a starting point for developers to make their own applications using this technology.
+
 With StableLM as its foundation, the chatbot is able to generate responses that are highly context-sensitive and demonstrate a remarkable level of understanding of natural language.
 
 To try out the chatbot, simply follow the instructions provided in the repository. There is a runme.bat file included to download and install miniconda and resolve the environment. The runme also launches the interactive chat prompt which will run in a commandline window. It's not a fancy webapp. 
